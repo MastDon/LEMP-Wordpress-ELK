@@ -1,0 +1,44 @@
+---
+# tasks file for mysql_install
+- name: Install MySQL
+  ansible.builtin.apt:
+    name:
+      - mysql-server
+      - python3-pip
+    state: present
+    update_cache: true
+
+- name: Install MySQL module requirements
+  ansible.builtin.pip:
+    name:
+      - PyMySQL
+      - pip
+    state: present
+
+- name: Create a new database
+  community.mysql.mysql_db:
+    name: "{{ db_name }}"
+    state: present
+    login_unix_socket: /run/mysqld/mysqld.sock
+
+- name: Create database user
+  community.mysql.mysql_user:
+    name: "{{ db_user }}"
+    password: "{{ db_user_password }}"
+    priv: '{{ db_name }}.*:ALL'
+    state: present
+    login_unix_socket: /run/mysqld/mysqld.sock
+
+# - name: Copy database to remout server
+    #   ansible.builtin.copy:
+    #     src: "files/onstyle.sql"
+    #     dest: "/tmp/onstyle.sql"
+
+    # - name: Restore database from dump
+    #   community.mysql.mysql_db:
+    #     name:
+    #       - xz
+    #     state: import
+    #     target: "/tmp/onstyle.sql"
+    #     login_unix_socket: /run/mysqld/mysqld.sock
+    #   run_once: true

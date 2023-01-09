@@ -1,0 +1,7 @@
+---
+# vars file for nginx_vhost_install
+document_root: "/var/www/"
+vhost_name: "test"
+app_user: "www-data"
+sites_aval: "/etc/nginx/sites-available/"
+sites_enable: "/etc/nginx/sites-enabled/"

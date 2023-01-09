@@ -1,0 +1,21 @@
+---
+# tasks file for install_php
+- name: Add php repository
+  ansible.builtin.apt_repository:
+    repo: "ppa:ondrej/php"
+
+- name: Install PHP
+  ansible.builtin.apt:
+    name:
+      - php{{ php_version }}-fpm
+      - php{{ php_version }}
+      - php{{ php_version }}-cli
+      - php{{ php_version }}-fpm
+      - php{{ php_version }}-mysql
+      - php{{ php_version }}-opcache
+      - php{{ php_version }}-mbstring
+      - php{{ php_version }}-xml
+      - php{{ php_version }}-gd
+      - php{{ php_version }}-curl
+    state: present
+    update_cache: true

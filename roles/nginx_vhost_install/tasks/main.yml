@@ -1,0 +1,39 @@
+---
+# tasks file for nginx_vhost_install
+- name: Install Nginx
+  ansible.builtin.apt:
+    name:
+      - nginx       
+    state: present
+    update_cache: true
+  notify: Restart_NGINX
+
+- name: Create vhost directory
+  ansible.builtin.file:
+    path: "{{ document_root }}{{ vhost_name }}"
+    state: directory
+
+- name: Copy NGINX config for new Vhost
+  ansible.builtin.template:
+    src: "vhost_wp.conf.j2"
+    dest: "{{ sites_aval }}{{ vhost_name }}"
+
+- name: Activate new Vhost
+  ansible.builtin.file:
+    src: "{{ sites_aval }}{{ vhost_name }}"
+    dest: "{{ sites_enable }}{{ vhost_name }}"
+    state: link
+  # notify: Restart_NGINX
+
+- name: Copy config vhost for Kibana
+  ansible.builtin.template:
+    src: "kibana.j2"
+    dest: "/etc/nginx/sites-available/kibana"
+  # notify: Restart_NGINX
+
+- name: Enable vhost Kibana
+  ansible.builtin.file:
+    src: "/etc/nginx/sites-available/kibana"
+    dest: "/etc/nginx/sites-enabled/kibana"
+    state: link
+  notify: Restart_NGINX

@@ -1,0 +1,14 @@
+---
+# handlers file for wordpress_install
+- name: Restart_NGINX
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+
+- name: Change_owner
+  ansible.builtin.file:
+    dest: "{{ document_root }}{{ vhost_name }}"
+    owner: "{{ app_user }}"
+    group: "{{ app_user }}"
+    recurse: true
+  notify: Restart_NGINX

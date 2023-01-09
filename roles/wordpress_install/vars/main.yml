@@ -1,0 +1,5 @@
+---
+# vars file for wordpress_install
+document_root: "/var/www/"
+# vhost_name: "test2"
+app_user: "www-data"

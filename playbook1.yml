@@ -1,0 +1,14 @@
+---
+- name: Test role
+  hosts: VBOX
+  vars:
+    php_version: "7.4"
+    # vhost_name: "test2"
+  become: true
+
+
+  roles:
+    - install_php
+    - nginx_vhost_install
+    - mysql_install
+    - wordpress_install

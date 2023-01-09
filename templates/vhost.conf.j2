@@ -1,0 +1,21 @@
+server {
+         listen       80;
+         server_name  {{ vhost_name }};
+         root         {{document_root}}{{ vhost_name }};
+
+         access_log /var/log/nginx/{{ vhost_name }}-access.log;
+         error_log  /var/log/nginx/{{ vhost_name }}-error.log error;
+         index index.php index.htm index.html;
+
+         location / {
+                      try_files $uri $uri/ /index.php$is_args$args;
+         }
+
+         location ~ \.php$ {
+            fastcgi_split_path_info ^(.+\.php)(/.+)$;
+            # fastcgi_pass unix:/run/php/php-fpm.sock;
+            fastcgi_pass unix:/run/php/php{{ php_version }}-fpm.sock;
+            fastcgi_index index.php;
+            include fastcgi.conf;
+    }
+}

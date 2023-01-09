@@ -1,0 +1,13 @@
+---
+# tasks file for wordpress_install
+- name: Clone wp files from git
+  ansible.builtin.git:
+    repo: "https://github.com/WordPress/WordPress.git"
+    dest: "{{ document_root }}{{ vhost_name }}"
+  notify: Change_owner
+
+- name: Copy wp-config.php to site directory
+  ansible.builtin.template:
+    src: "wp-config.php.j2"
+    dest: "{{ document_root }}{{ vhost_name }}/wp-config.php"
+  notify: Restart_NGINX
