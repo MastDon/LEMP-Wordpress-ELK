@@ -1,0 +1,16 @@
+---
+# tasks file for filebeat
+- name: Filebeat install
+  ansible.builtin.apt:
+    name:
+      - filebeat
+    state: present
+    update_cache: true
+  notify: Enable_Filebeat_service
+
+- name: Copy Filebeat config
+  ansible.builtin.template:
+    src: "filebeat.yml.j2"
+    dest: "/etc/filebeat/filebeat.yml"
+    owner: root
+  notify: Restart_filebeat

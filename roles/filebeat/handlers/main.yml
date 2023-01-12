@@ -1,0 +1,12 @@
+---
+# handlers file for filebeat
+- name: Enable_Filebeat_service
+  ansible.builtin.service:
+    name: filebeat
+    state: started
+    enabled: true
+
+- name: Restart_filebeat
+  ansible.builtin.service:
+    name: filebeat
+    state: restarted

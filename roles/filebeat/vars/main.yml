@@ -1,0 +1,4 @@
+---
+# vars file for filebeat
+filebeat_log_path: "/tmp/debug.log"
+filebeat_logstash_host: "localhost:5044"
