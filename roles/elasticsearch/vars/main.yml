@@ -1,0 +1,10 @@
+---
+# vars file for elasticsearch
+elasticsearch_jvm_min: "1024M"
+elasticsearch_jvm_max: "1024M"
+es_path_data: "/var/lib/elasticsearch"
+es_path_logs: "/var/log/elasticsearch"
+es_network_host: "0.0.0.0"
+es_http_port: "9200"
+es_tansport_host: "localhost"
+es_tansport_port: "9300"
