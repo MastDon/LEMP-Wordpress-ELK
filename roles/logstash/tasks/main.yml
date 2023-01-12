@@ -1,0 +1,30 @@
+---
+# tasks file for logstash
+- name: Logstash install
+  ansible.builtin.apt:
+    name: logstash
+    state: present
+    update_cache: true
+
+- name: Copy debug.log example
+  ansible.builtin.copy:
+    src: "debug.log"
+    dest: "/tmp/debug.log"
+
+- name: Enable start logstash
+  ansible.builtin.service:
+    name: logstash
+    state: started
+    enabled: true
+
+- name: Copy logstash pipeline config
+  ansible.builtin.template:
+    src: "wordpress_debug.conf.j2"
+    dest: "/etc/logstash/conf.d/wordpress.conf"
+    owner: root
+    group: logstash
+    mode: "0660"
+  notify: Restart_logstash
+
+
+    

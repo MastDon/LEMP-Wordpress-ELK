@@ -94,5 +94,5 @@
 
 # JDK 9+ GC logging
 9-:-Xlog:gc*,gc+age=trace,safepoint:file=/var/log/elasticsearch/gc.log:utctime,pid,tags:filecount=32,filesize=64m
--Xms{{ elasticsearch_jvm_min }}
--Xmx{{ elasticsearch_jvm_max }}
+-Xms{{ es_jvm_min }}
+-Xmx{{ es_jvm_max }}

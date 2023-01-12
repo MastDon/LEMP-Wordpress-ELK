@@ -1,0 +1,26 @@
+input {
+  beats {
+    port => {{ logstash_input_port }}
+  }
+}
+filter {
+        grok {
+        match => [
+            "message", "\[%{MONTHDAY:day}-%{MONTH:month}-%{YEAR:year} %{TIME:time} %{WORD:zone}\] PHP %{DATA:level}\:  %{GREEDYDATA:error}"
+          ]
+    }
+    mutate {
+        add_field => [ "timestamp", "%{year}-%{month}-%{day} %{time}" ]
+        remove_field => [ "zone", "month", "day", "time" ,"year"]
+    }
+    date {
+        match => [ "timestamp" , "yyyy-MMM-dd HH:mm:ss" ]
+        remove_field => [ "timestamp" ]
+    }
+}
+output {
+   elasticsearch {
+     hosts => ["{{ logstash_es_host }}"]
+     index => "{{ logstash_index_name }}-%{+YYYY.MM.dd}"
+   }
+ }
