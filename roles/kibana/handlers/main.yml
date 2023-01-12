@@ -1,0 +1,12 @@
+---
+# handlers file for kibana
+- name: Restart_Kibana
+  ansible.builtin.service:
+    name: kibana
+    state: restarted
+
+- name: Enable_kibana
+  ansible.builtin.service:
+    name: kibana
+    state: started
+    enabled: true

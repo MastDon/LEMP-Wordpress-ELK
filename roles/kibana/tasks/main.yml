@@ -1,0 +1,17 @@
+---
+# tasks file for kibana
+- name: Kibana install
+  ansible.builtin.apt:
+    name: kibana
+    state: present
+    update_cache: true
+  notify: Enable_kibana
+
+- name: Copy Kibana config
+  ansible.builtin.template:
+    src: "kibana.yml.j2"
+    dest: "/etc/kibana/kibana.yml"
+    owner: root
+    group: kibana
+    mode: "0664"
+  notify: Restart_Kibana

@@ -5,5 +5,3 @@ logstash_jvm_max: "1024M"
 logstash_input_port: "5044"
 logstash_es_host: "localhost:9200"
 logstash_index_name: "wp-debug-log"
-
-
