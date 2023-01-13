@@ -1,6 +1,6 @@
 input {
     file {
-    path => "/var/www/test/wp-content/debug.log"
+    path => "{{ document_root }}{{ vhost_name }}/wp-content/debug.log"
     }
 }
 filter {
@@ -21,6 +21,6 @@ date {
 output {
 elasticsearch {
  hosts => ["localhost:9200"]
- index => "wp-%{+YYYY.MM.dd}"
+ index => "{{ logstash_index_name }}-%{+YYYY.MM.dd}"
 }
 }
