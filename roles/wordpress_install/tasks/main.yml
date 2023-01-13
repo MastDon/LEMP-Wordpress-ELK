@@ -1,18 +1,18 @@
 ---
 # tasks file for wordpress_install
-- name: Clone wp files from git
-  ansible.builtin.git:
-    repo: "https://github.com/WordPress/WordPress.git"
+- name: Install Wordpress
+  ansible.builtin.unarchive:
+    src: "https://wordpress.org/latest.tar.gz"
     dest: "{{ document_root }}{{ vhost_name }}"
-  notify: Change_owner
+    owner: "{{ app_user }}"
+    group: "{{ app_user }}"
+    remote_src: yes
+    extra_opts: [--strip-components=1]
 
 - name: Copy wp-config.php to site directory
   ansible.builtin.template:
     src: "wp-config.php.j2"
     dest: "{{ document_root }}{{ vhost_name }}/wp-config.php"
-    owner: "www-data"
-    group: "www-data"
-  notify: Restart_NGINX
-
-# - name: Force all notified handlers to run at this point, not waiting for normal sync points
-#   ansible.builtin.meta: flush_handlers  
+    owner: "{{ app_user }}"
+    group: "{{ app_user }}"
+  notify: Restart_NGINX 
