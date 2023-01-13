@@ -10,4 +10,9 @@
   ansible.builtin.template:
     src: "wp-config.php.j2"
     dest: "{{ document_root }}{{ vhost_name }}/wp-config.php"
+    owner: "www-data"
+    group: "www-data"
   notify: Restart_NGINX
+
+# - name: Force all notified handlers to run at this point, not waiting for normal sync points
+#   ansible.builtin.meta: flush_handlers  

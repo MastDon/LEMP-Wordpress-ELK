@@ -11,4 +11,3 @@
     owner: "{{ app_user }}"
     group: "{{ app_user }}"
     recurse: true
-  notify: Restart_NGINX

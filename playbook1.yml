@@ -12,3 +12,7 @@
     - nginx_vhost_install
     - mysql_install
     - wordpress_install
+    - elasticsearch
+    - logstash
+    - kibana
+    - filebeat
