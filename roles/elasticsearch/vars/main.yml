@@ -1,7 +1,7 @@
 ---
 # vars file for elasticsearch
-es_jvm_min: "1024M"
-es_jvm_max: "1024M"
+es_jvm_min: "512M"
+es_jvm_max: "512M"
 es_path_data: "/var/lib/elasticsearch"
 es_path_logs: "/var/log/elasticsearch"
 es_network_host: "0.0.0.0"

@@ -5,8 +5,7 @@
     name: kibana
     state: restarted
 
-- name: Enable_kibana
+- name: Nginx_restart
   ansible.builtin.service:
-    name: kibana
-    state: started
-    enabled: true
+    name: nginx
+    state: restarted

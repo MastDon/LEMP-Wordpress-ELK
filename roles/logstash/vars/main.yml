@@ -1,7 +1,10 @@
 ---
 # vars file for logstash
-logstash_jvm_min: "1024M"
-logstash_jvm_max: "1024M"
+logstash_jvm_min: "512M"
+logstash_jvm_max: "512M"
 logstash_input_port: "5044"
 logstash_es_host: "localhost:9200"
-logstash_index_name: "wp-debug-log-"
+kibana_index_name: "wp-debug-log-"
+document_root: "/var/www/"
+vhost_name: "test"
+app_user: "www-data"

@@ -5,7 +5,12 @@
     name: kibana
     state: present
     update_cache: true
-  notify: Enable_kibana
+
+- name: Enable_kibana
+  ansible.builtin.service:
+    name: kibana
+    state: started
+    enabled: true
 
 - name: Copy Kibana config
   ansible.builtin.template:
@@ -14,4 +19,9 @@
     owner: root
     group: kibana
     mode: "0664"
-  notify: Restart_Kibana
+  notify: 
+    - Restart_Kibana
+    - Nginx_restart
+
+- name: Flush handlers
+  meta: flush_handlers

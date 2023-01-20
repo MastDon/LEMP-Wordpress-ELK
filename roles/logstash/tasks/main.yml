@@ -6,16 +6,12 @@
     state: present
     update_cache: true
 
-- name: Copy debug.log example
-  ansible.builtin.copy:
-    src: "debug.log"
-    dest: "/tmp/debug.log"
-
 - name: Enable start logstash
   ansible.builtin.service:
     name: logstash
     state: started
     enabled: true
+
 
 - name: Copy logstash pipeline config
   ansible.builtin.template:
@@ -26,5 +22,25 @@
     mode: "0660"
   notify: Restart_logstash
 
+- name: Wait for Logstash startup
+  wait_for_connection:
+    delay: 30
+    timeout: 300
 
-    
+
+- name: Create index-pattern
+  uri:
+    url: "http://{{kibana_server_ip}}:5601/api/saved_objects/index-pattern"
+    method: POST
+    body: "{{ '{\"attributes\": {\"title\": \"'+ kibana_index_pattern +'\", \"timeFieldName\": \"'+ kibana_time_filter +'\"}}' }}"
+    body_format: json
+    headers:
+      Content-Type: "application/json; charset=utf-8"
+      Kbn-xsrf: true
+
+- name: Copy debug.log example
+  ansible.builtin.copy:
+    src: "debug.log"
+    dest: "/var/www/test/wp-content/debug.log"
+    owner: "{{ app_user }}"
+    group: "{{ app_user }}"

@@ -1,5 +1,10 @@
 ---
 # tasks file for install_php
+- name: Update all packages to their latest version
+  ansible.builtin.apt:
+    name: "*"
+    state: latest
+
 - name: Add php repository
   ansible.builtin.apt_repository:
     repo: "ppa:ondrej/php"
