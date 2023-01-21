@@ -15,4 +15,3 @@
     - elasticsearch
     - kibana
     - logstash
-    # - filebeat

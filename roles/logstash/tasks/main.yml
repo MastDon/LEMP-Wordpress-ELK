@@ -32,7 +32,7 @@
   ansible.builtin.uri:
     url: "{{ kibana_server_ip }}{{ kibana_api_url }}"
     method: POST
-    body: "{{ '{\"attributes\": {\"title\": \"'+ {{ kibana_index_pattern }} +'\", \"timeFieldName\": \"'+ {{ kibana_time_filter }} +'\"}}' }}"
+    body: "{{ '{\"attributes\": {\"title\": \"'+ kibana_index_pattern  +'\", \"timeFieldName\": \"'+  kibana_time_filter  +'\"}}' }}"
     body_format: json
     headers:
       Content-Type: "application/json; charset=utf-8"

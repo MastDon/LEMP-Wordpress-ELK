@@ -19,7 +19,7 @@
   community.mysql.mysql_db:
     name: "{{ db_name }}"
     state: present
-    login_unix_socket: {{ mysql_socket }}
+    login_unix_socket: "{{ mysql_socket }}"
 
 - name: Create database user
   community.mysql.mysql_user:
@@ -27,4 +27,4 @@
     password: "{{ db_user_password }}"
     priv: '{{ db_name }}.*:ALL'
     state: present
-    login_unix_socket: {{ mysql_socket }}
+    login_unix_socket: "{{ mysql_socket }}"
