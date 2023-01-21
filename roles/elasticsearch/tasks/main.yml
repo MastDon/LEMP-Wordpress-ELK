@@ -11,14 +11,14 @@
 
 - name: Import the Elastic Key
   ansible.builtin.apt_key:
-    url: "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
+    url: "{{ es_apt_key }}"
     state: present
 
 - name: Adding Elastic APT repository
   ansible.builtin.apt_repository:
-    repo: "deb https://artifacts.elastic.co/packages/7.x/apt stable main"
+    repo: "{{ es_apt_repository }}"
     state: present
-    filename: "elastic-7.x.list"
+    filename: "{{ es_apt_repositroy_file }}"
     update_cache: true
 
 - name: Install elasticsearch
@@ -36,7 +36,7 @@
 - name: Copy elasticsearch config
   ansible.builtin.template:
     src: "elasticsearch.yml.j2"
-    dest: "/etc/elasticsearch/elasticsearch.yml"
+    dest: "{{ es_root_path }}elasticsearch.yml"
     owner: root
     group: elasticsearch
     mode: "0660"
@@ -44,7 +44,7 @@
 - name: Copy jvm.options file for elasticsearch
   ansible.builtin.template:
     src: "jvm.options.j2"
-    dest: "/etc/elasticsearch/jvm.options"
+    dest: "{{ es_root_path }}jvm.options"
     owner: root
     group: elasticsearch
     mode: "0660"

@@ -15,7 +15,7 @@
 - name: Copy Kibana config
   ansible.builtin.template:
     src: "kibana.yml.j2"
-    dest: "/etc/kibana/kibana.yml"
+    dest: "{{ kibana_root_path }}kibana.yml"
     owner: root
     group: kibana
     mode: "0664"

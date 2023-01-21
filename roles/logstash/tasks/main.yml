@@ -6,7 +6,7 @@
     state: present
     update_cache: true
 
-- name: Enable start logstash
+- name: Enable logstash
   ansible.builtin.service:
     name: logstash
     state: started
@@ -16,23 +16,23 @@
 - name: Copy logstash pipeline config
   ansible.builtin.template:
     src: "wordpress_debug.conf.j2"
-    dest: "/etc/logstash/conf.d/wordpress.conf"
+    dest: "{{ logstash_pipeline_folder }}wordpress.conf"
     owner: root
     group: logstash
     mode: "0660"
   notify: Restart_logstash
 
 - name: Wait for Logstash startup
-  wait_for_connection:
+  ansible.builtin.wait_for_connection:
     delay: 30
     timeout: 300
 
 
 - name: Create index-pattern
-  uri:
-    url: "http://{{kibana_server_ip}}:5601/api/saved_objects/index-pattern"
+  ansible.builtin.uri:
+    url: "{{ kibana_server_ip }}{{ kibana_api_url }}"
     method: POST
-    body: "{{ '{\"attributes\": {\"title\": \"'+ kibana_index_pattern +'\", \"timeFieldName\": \"'+ kibana_time_filter +'\"}}' }}"
+    body: "{{ '{\"attributes\": {\"title\": \"'+ {{ kibana_index_pattern }} +'\", \"timeFieldName\": \"'+ {{ kibana_time_filter }} +'\"}}' }}"
     body_format: json
     headers:
       Content-Type: "application/json; charset=utf-8"
@@ -41,6 +41,6 @@
 - name: Copy debug.log example
   ansible.builtin.copy:
     src: "debug.log"
-    dest: "/var/www/test/wp-content/debug.log"
+    dest: "{{ document_root }}{{ vhost_name }}/wp-content/debug.log"
     owner: "{{ app_user }}"
     group: "{{ app_user }}"

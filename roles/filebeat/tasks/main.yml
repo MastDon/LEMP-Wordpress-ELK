@@ -11,6 +11,6 @@
 - name: Copy Filebeat config
   ansible.builtin.template:
     src: "filebeat.yml.j2"
-    dest: "/etc/filebeat/filebeat.yml"
+    dest: "{{ filebeat_root_path }}filebeat.yml"
     owner: root
   notify: Restart_filebeat
