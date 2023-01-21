@@ -19,7 +19,7 @@
   community.mysql.mysql_db:
     name: "{{ db_name }}"
     state: present
-    login_unix_socket: /run/mysqld/mysqld.sock
+    login_unix_socket: {{ mysql_socket }}
 
 - name: Create database user
   community.mysql.mysql_user:
@@ -27,18 +27,4 @@
     password: "{{ db_user_password }}"
     priv: '{{ db_name }}.*:ALL'
     state: present
-    login_unix_socket: /run/mysqld/mysqld.sock
-
-# - name: Copy database to remout server
-    #   ansible.builtin.copy:
-    #     src: "files/onstyle.sql"
-    #     dest: "/tmp/onstyle.sql"
-
-    # - name: Restore database from dump
-    #   community.mysql.mysql_db:
-    #     name:
-    #       - xz
-    #     state: import
-    #     target: "/tmp/onstyle.sql"
-    #     login_unix_socket: /run/mysqld/mysqld.sock
-    #   run_once: true
+    login_unix_socket: {{ mysql_socket }}

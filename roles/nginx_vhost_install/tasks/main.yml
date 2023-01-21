@@ -6,7 +6,11 @@
       - nginx       
     state: present
     update_cache: true
-  notify: Restart_NGINX
+  
+- name: Service nginx enable
+  ansible.builtin.service:
+    name: nginx
+    enabled: true
 
 - name: Create vhost directory
   ansible.builtin.file:
@@ -23,13 +27,11 @@
     src: "{{ sites_aval }}{{ vhost_name }}"
     dest: "{{ sites_enable }}{{ vhost_name }}"
     state: link
-  # notify: Restart_NGINX
 
 - name: Copy config vhost for Kibana
   ansible.builtin.template:
     src: "kibana.j2"
     dest: "/etc/nginx/sites-available/kibana"
-  # notify: Restart_NGINX
 
 - name: Enable vhost Kibana
   ansible.builtin.file:

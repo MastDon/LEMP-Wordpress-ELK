@@ -2,7 +2,7 @@
 # tasks file for wordpress_install
 - name: Install Wordpress
   ansible.builtin.unarchive:
-    src: "https://wordpress.org/latest.tar.gz"
+    src: "{{ src_url }}"
     dest: "{{ document_root }}{{ vhost_name }}"
     owner: "{{ app_user }}"
     group: "{{ app_user }}"
