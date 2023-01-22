@@ -16,7 +16,7 @@
 - name: Copy logstash pipeline config
   ansible.builtin.template:
     src: "wordpress_debug.conf.j2"
-    dest: "{{ logstash_pipeline_folder }}wordpress.conf"
+    dest: "{{ logstash_pipeline_folder }}{{ vhost_name }}.conf"
     owner: root
     group: logstash
     mode: "0660"

@@ -1,8 +1,8 @@
 ---
 # vars file for wordpress_install
 document_root: "/var/www/"
-vhost_name: "test"
+# vhost_name: "test"
 app_user: "www-data"
-db_name: "test"
-db_user: "test"
+# db_name: "test"
+# db_user: "test"
 src_url: "https://wordpress.org/latest.tar.gz"

@@ -1,11 +1,29 @@
 ---
 - name: Test role
   hosts: VBOX
-  vars:
-    php_version: "7.3"
-    #vhost_name: "test2"
   become: true
+  vars_prompt:
+    - name: php_version
+      prompt: "***** Choose php version. For example: 7.4 . | By default used php7.4 *****"
+      default: "7.4"
+      private: false
+  
+    - name: vhost_name
+      prompt: "***** Set vhost name *****"
+      private: false
 
+    - name: db_name
+      prompt: "***** Set database name *****"
+      private: false
+
+    - name: db_user
+      prompt: "***** Set db user name *****"
+      private: false
+
+    - name: db_user_password
+      prompt: "***** Set db user password *****"
+      confirm: true
+  
 
   roles:
     - install_php

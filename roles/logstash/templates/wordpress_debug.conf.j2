@@ -9,19 +9,29 @@ filter {
     match => [
         "message", "\[%{MONTHDAY:day}-%{MONTH:month}-%{YEAR:year} %{TIME:time} %{WORD:zone}\] PHP %{DATA:level}\:  %{GREEDYDATA:error}"
       ]
-}
-# mutate {
-#     # add_field => [ "timestamp", "%{year}-%{month}-%{day} %{time}" ]
-#     remove_field => [ "zone", "month", "day", "time" ,"year"]
-# }
-# date {
-#     match => [ "timestamp" , "yyyy-MMM-dd HH:mm:ss" ]
-#     remove_field => [ "timestamp" ]
-# }
+    }
+    # mutate {
+    #      add_field => [ "timestamp", "%{year}-%{month}-%{day} %{time}" ]
+    #      remove_field => [ "zone", "month", "day", "time" ,"year"]
+    # }
+    mutate {
+         add_field => [ "timestamp", "%{day}-%{month}-%{year} %{time}" ]
+         remove_field => [ "zone", "month", "day", "time" ,"year"]
+    }
+
+    date {
+        match => [ "timestamp" , "dd-MMM-yyyy HH:mm:ss" ]
+        remove_field => [ "timestamp" ]
+    }
+
+    # date {
+    #     match => [ "timestamp" , "yyyy-MMM-dd HH:mm:ss" ]
+    #     remove_field => [ "timestamp" ]
+    # }
 }
 output {
 elasticsearch {
  hosts => ["localhost:9200"]
- index => "{{ kibana_index_name }}%{+YYYY.MM.dd}"
+ index => "{{ vhost_name }}-%{+YYYY.MM.dd}"
 }
 }
