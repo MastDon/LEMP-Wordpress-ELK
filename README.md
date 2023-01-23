@@ -1,5 +1,5 @@
 # Ansible
-# Install LEMP, Wordpress, ELK stack with auto creating indexes
+# Install LEMP, Wordpress, ELK stack with auto creating indexes for for wordpress debug.log
 
 ## Features
 - Installing php
