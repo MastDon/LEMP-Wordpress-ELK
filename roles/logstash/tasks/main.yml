@@ -12,6 +12,13 @@
     state: started
     enabled: true
 
+- name: Copy debug.log example
+  ansible.builtin.template:
+    src: "debug.log.j2"
+    dest: "{{ document_root }}{{ vhost_name }}/wp-content/debug.log"
+    owner: "{{ app_user }}"
+    group: "{{ app_user }}"
+
 
 - name: Copy logstash pipeline config
   ansible.builtin.template:
@@ -38,9 +45,9 @@
       Content-Type: "application/json; charset=utf-8"
       Kbn-xsrf: true
 
-- name: Copy debug.log example
-  ansible.builtin.copy:
-    src: "debug.log"
-    dest: "{{ document_root }}{{ vhost_name }}/wp-content/debug.log"
-    owner: "{{ app_user }}"
-    group: "{{ app_user }}"
+# - name: Copy debug.log example
+#   ansible.builtin.copy:
+#     src: "debug.log"
+#     dest: "{{ document_root }}{{ vhost_name }}/wp-content/debug.log"
+#     owner: "{{ app_user }}"
+#     group: "{{ app_user }}"

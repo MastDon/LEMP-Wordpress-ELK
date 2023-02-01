@@ -32,7 +32,7 @@
     - swap
     - install_php
     - nginx_vhost_install
-    - letsencrypt
+    # - letsencrypt
     - mysql_install
     - wordpress_install
     - elasticsearch
