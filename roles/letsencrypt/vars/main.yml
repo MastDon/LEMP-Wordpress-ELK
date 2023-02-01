@@ -1,0 +1,10 @@
+---
+# vars file for letsencrypt
+
+document_root: "/var/www/"
+letsencrypt_email: "sleptsovilya@gmail.com"
+letsencrypt_dir: "/var/www/letsencrypt/"
+# vhost_name: "raki.dn.ua"
+sites_aval: "/etc/nginx/sites-available/"
+sites_enable: "/etc/nginx/sites-enabled/"
+# php_version: "7.4"

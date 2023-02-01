@@ -2,6 +2,11 @@ input {
     file {
     path => "{{ document_root }}{{ vhost_name }}/wp-content/debug.log"
     start_position => "beginning"
+    codec => multiline {
+            pattern => "^\["
+            negate => true
+            what => "previous"
+        }
     }
 }
 filter {

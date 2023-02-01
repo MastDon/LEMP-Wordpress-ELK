@@ -1,0 +1,13 @@
+server {
+    listen 80 default_server;
+    server_name {{ vhost_name }};
+
+    location /.well-known/acme-challenge {
+        root {{ letsencrypt_dir }};
+        try_files $uri $uri/ =404;
+    }
+
+    location / {
+        rewrite ^ https://{{ vhost_name }}$request_uri? permanent;
+    }
+}

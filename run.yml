@@ -7,17 +7,20 @@
       prompt: "***** Choose php version. For example: 7.4 . | By default used php7.4 *****"
       default: "7.4"
       private: false
-  
+
     - name: vhost_name
       prompt: "***** Set vhost name *****"
+      default: "raki.dn.ua"
       private: false
 
     - name: db_name
       prompt: "***** Set database name *****"
+      default: "raki_db"
       private: false
 
     - name: db_user
       prompt: "***** Set db user name *****"
+      default: "foji"
       private: false
 
     - name: db_user_password
@@ -26,8 +29,10 @@
   
 
   roles:
+    - swap
     - install_php
     - nginx_vhost_install
+    - letsencrypt
     - mysql_install
     - wordpress_install
     - elasticsearch

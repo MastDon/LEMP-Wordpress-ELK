@@ -1,0 +1,61 @@
+---
+# tasks file for letsencrypt
+- name: Install letsencrypt
+  ansible.builtin.apt:
+    name: letsencrypt
+    state: latest
+
+- name: Create letsencrypt directory
+  ansible.builtin.file:
+    name: "{{ letsencrypt_dir }}"
+    state: directory
+
+- name: Remove default nginx config
+  ansible.builtin.file:
+    name: /etc/nginx/sites-enabled/default
+    state: absent
+
+- name: Nginx config for letsencrypt request
+  ansible.builtin.template:
+    src: vhost_wp.conf.j2
+    dest: "{{ sites_aval }}{{ vhost_name }}"
+
+- name: Activate new Vhost
+  ansible.builtin.file:
+    src: "{{ sites_aval }}{{ vhost_name }}"
+    dest: "{{ sites_enable }}{{ vhost_name }}"
+    state: link
+
+- name: Reload nginx to activate new config
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+
+- name: Create letsencrypt certificate
+  ansible.builtin.shell:
+     letsencrypt certonly -n --webroot -w {{ letsencrypt_dir }} -m {{ letsencrypt_email }} --agree-tos -d {{ vhost_name }}
+  args:
+     creates: /etc/letsencrypt/live/{{ vhost_name }}
+  become: true
+
+- name: Generate dhparams
+  ansible.builtin.shell: 
+    openssl dhparam -out /etc/nginx/dhparams.pem 2048
+  args:
+    creates: /etc/nginx/dhparams.pem
+
+- name: Copy nginx ssl config
+  ansible.builtin.template:
+    src: vhost_wp_le.conf.j2
+    dest: "{{ sites_aval }}{{ vhost_name }}"
+
+- name: Reload nginx to activate specified site
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+
+- name: Add letsencrypt cronjob for cert renewal
+  ansible.builtin.cron:
+    name: letsencrypt_renewal
+    special_time: weekly
+    job: letsencrypt --renew certonly -n --webroot -w {{ letsencrypt_dir }} -m {{ letsencrypt_email }} --agree-tos -d {{ vhost_name }} && systemctl reload nginx
