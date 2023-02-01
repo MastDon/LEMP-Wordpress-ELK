@@ -1,48 +1,48 @@
-[21-Jan-2023 17:20:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 102
-[22-Jan-2023 18:22:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 103
-[22-Jan-2023 19:32:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 104
-[22-Jan-2023 20:23:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 105
-[22-Jan-2023 16:12:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 106
-[22-Jan-2023 10:52:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 107
-[22-Jan-2023 11:28:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 102
-[22-Jan-2023 12:42:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 103
-[22-Jan-2023 13:29:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 104
-[22-Jan-2023 20:03:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 105
-[22-Jan-2023 17:57:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 106
-[22-Jan-2023 14:42:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 107
-[23-Jan-2023 17:20:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 102
-[23-Jan-2023 18:23:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 103
-[23-Jan-2023 19:32:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 104
-[23-Jan-2023 20:23:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 105
-[23-Jan-2023 16:12:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 106
-[23-Jan-2023 10:52:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 107
-[23-Jan-2023 11:28:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 102
-[23-Jan-2023 12:42:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 103
-[23-Jan-2023 13:29:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 104
-[23-Jan-2023 20:03:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 105
-[23-Jan-2023 17:57:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 106
-[23-Jan-2023 14:42:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 107
-[24-Jan-2023 17:20:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 102
-[24-Jan-2023 18:24:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 103
-[24-Jan-2023 19:32:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 104
-[24-Jan-2023 20:23:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 105
-[24-Jan-2023 16:12:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 106
-[24-Jan-2023 10:52:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 107
-[24-Jan-2023 11:28:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 102
-[24-Jan-2023 12:42:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 103
-[24-Jan-2023 13:29:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 104
-[24-Jan-2023 20:03:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 105
-[24-Jan-2023 17:57:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 106
-[24-Jan-2023 14:42:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 107
-[31-Jan-2023 17:20:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 102
-[31-Jan-2023 18:31:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 103
-[31-Jan-2023 19:32:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 104
-[31-Jan-2023 20:23:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 105
-[31-Jan-2023 16:12:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 106
-[31-Jan-2023 10:52:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 107
-[31-Jan-2023 11:28:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 102
-[31-Jan-2023 12:42:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 103
-[31-Jan-2023 13:29:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 104
-[31-Jan-2023 20:03:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 105
-[31-Jan-2023 17:57:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 106
-[31-Jan-2023 14:42:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/portal.test.local/wp-content/themes/test-portal/helpers/user_function.php on line 107
+[01-Feb-2023 17:20:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 102
+[01-Feb-2023 18:22:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 103
+[01-Feb-2023 19:32:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 104
+[01-Feb-2023 20:23:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 105
+[01-Feb-2023 16:12:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 106
+[01-Feb-2023 10:52:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 107
+[01-Feb-2023 11:28:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 102
+[01-Feb-2023 12:42:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 103
+[01-Feb-2023 13:29:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 104
+[01-Feb-2023 20:03:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 105
+[01-Feb-2023 17:57:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 106
+[01-Feb-2023 14:42:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 107
+[01-Feb-2023 17:20:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 102
+[02-Feb-2023 11:23:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 103
+[02-Feb-2023 12:32:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 104
+[02-Feb-2023 11:23:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 105
+[02-Feb-2023 11:12:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 106
+[02-Feb-2023 11:52:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 107
+[02-Feb-2023 11:28:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 102
+[02-Feb-2023 12:42:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 103
+[02-Feb-2023 13:29:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 104
+[02-Feb-2023 13:03:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 105
+[02-Feb-2023 13:57:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 106
+[02-Feb-2023 13:42:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 107
+[02-Feb-2023 14:20:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 102
+[02-Feb-2023 14:24:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 103
+[02-Feb-2023 14:32:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 104
+[02-Feb-2023 14:23:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 105
+[02-Feb-2023 15:12:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 106
+[02-Feb-2023 15:52:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 107
+[02-Feb-2023 15:28:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 102
+[02-Feb-2023 15:42:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 103
+[02-Feb-2023 15:29:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 104
+[02-Feb-2023 16:03:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 105
+[02-Feb-2023 16:57:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 106
+[02-Feb-2023 16:42:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 107
+[02-Feb-2023 16:20:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 102
+[02-Feb-2023 16:31:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 103
+[02-Feb-2023 16:32:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 104
+[02-Feb-2023 16:23:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 105
+[02-Feb-2023 16:12:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 106
+[02-Feb-2023 16:52:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 107
+[02-Feb-2023 16:28:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 102
+[02-Feb-2023 16:42:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 103
+[02-Feb-2023 16:29:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 104
+[02-Feb-2023 16:03:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 105
+[02-Feb-2023 16:57:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 106
+[02-Feb-2023 16:42:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/test/www/{{ vhost_name }}/wp-content/themes/test-portal/helpers/user_function.php on line 107
