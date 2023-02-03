@@ -20,6 +20,23 @@
     name: "{{ db_name }}"
     state: present
     login_unix_socket: "{{ mysql_socket }}"
+  when: db_action  == "1"
+
+- name: Copy database to remout server
+  ansible.builtin.copy:
+    src: "{{ db_dump_path }}"
+    dest: "/tmp/onstyle.sql"
+  when: db_action  == "2"
+
+- name: Restore database from dump
+  community.mysql.mysql_db:
+    name:
+      - "{{ db_name }}"
+    state: import
+    target: "/tmp/onstyle.sql"
+    login_unix_socket: /run/mysqld/mysqld.sock
+  when: db_action  == "2"
+  run_once: true
 
 - name: Create database user
   community.mysql.mysql_user:
