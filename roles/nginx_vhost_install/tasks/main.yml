@@ -27,15 +27,15 @@
     src: "{{ sites_aval }}{{ vhost_name }}"
     dest: "{{ sites_enable }}{{ vhost_name }}"
     state: link
-
-- name: Copy config vhost for Kibana
-  ansible.builtin.template:
-    src: "kibana.j2"
-    dest: "/etc/nginx/sites-available/kibana"
-
-- name: Enable vhost Kibana
-  ansible.builtin.file:
-    src: "/etc/nginx/sites-available/kibana"
-    dest: "/etc/nginx/sites-enabled/kibana"
-    state: link
   notify: Restart_NGINX
+# - name: Copy config vhost for Kibana
+#   ansible.builtin.template:
+#     src: "kibana.j2"
+#     dest: "/etc/nginx/sites-available/kibana"
+
+# - name: Enable vhost Kibana
+#   ansible.builtin.file:
+#     src: "/etc/nginx/sites-available/kibana"
+#     dest: "/etc/nginx/sites-enabled/kibana"
+#     state: link
+  
