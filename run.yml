@@ -39,7 +39,7 @@
 
     - name: git_repo_url
       prompt: "***** Set git repositoty url | By default set official WordPress repositoty *****"
-      default: "git@github.com:WordPress/WordPress.git"
+      default: "https://github.com/WordPress/WordPress.git"
       private: false
 
 

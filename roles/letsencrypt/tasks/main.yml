@@ -58,4 +58,4 @@
   ansible.builtin.cron:
     name: letsencrypt_renewal
     special_time: weekly
-    job: letsencrypt --renew certonly -n --webroot -w {{ letsencrypt_dir }} -m {{ letsencrypt_email }} --agree-tos -d {{ vhost_name }} && systemctl reload nginx
+    job: certbot renew && systemctl reload nginx
