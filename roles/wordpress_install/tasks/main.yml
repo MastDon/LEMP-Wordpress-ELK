@@ -1,13 +1,21 @@
 ---
 # tasks file for wordpress_install
-- name: Install Wordpress
-  ansible.builtin.unarchive:
-    src: "{{ src_url }}"
+# - name: Install Wordpress
+#   ansible.builtin.unarchive:
+#     src: "{{ src_url }}"
+#     dest: "{{ document_root }}{{ vhost_name }}"
+#     owner: "{{ app_user }}"
+#     group: "{{ app_user }}"
+#     remote_src: yes
+#     extra_opts: [--strip-components=1]
+
+- name: Clone a github repository
+  ansible.builtin.git:
+    repo: "{{ git_repo_url }}"
     dest: "{{ document_root }}{{ vhost_name }}"
-    owner: "{{ app_user }}"
-    group: "{{ app_user }}"
-    remote_src: yes
-    extra_opts: [--strip-components=1]
+    accept_hostkey: true
+    clone: yes
+    update: yes
 
 - name: Copy wp-config.php to site directory
   ansible.builtin.template:
@@ -15,4 +23,11 @@
     dest: "{{ document_root }}{{ vhost_name }}/wp-config.php"
     owner: "{{ app_user }}"
     group: "{{ app_user }}"
-  notify: Restart_NGINX 
+
+- name: Change_owner
+  ansible.builtin.file:
+    dest: "{{ document_root }}{{ vhost_name }}"
+    owner: "{{ app_user }}"
+    group: "{{ app_user }}"
+    recurse: true
+  notify: Restart_NGINX
