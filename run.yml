@@ -10,8 +10,7 @@
 
     - name: vhost_name
       prompt: "***** Set vhost name *****"
-      default: "isdd.pp.ua"
-      confirm: true
+      default: "on-style.com.ua"
       private: false
 
     - name: db_action
@@ -39,16 +38,16 @@
 
     - name: git_repo_url
       prompt: "***** Set git repositoty url | By default set official WordPress repositoty *****"
-      default: "https://github.com/WordPress/WordPress.git"
+      default: "git@github.com:MastDon/onstyle_backup.git"
       private: false
 
 
 
   roles:
-    - swap
+    # - swap
     - install_php
     - nginx_vhost_install
-    # - letsencrypt
+    - letsencrypt
     - mysql_install
     - wordpress_install
     # - elasticsearch

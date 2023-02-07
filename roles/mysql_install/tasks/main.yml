@@ -19,6 +19,7 @@
   community.mysql.mysql_db:
     name: "{{ db_name }}"
     state: present
+    encoding: "utf8"
     login_unix_socket: "{{ mysql_socket }}"
   when: db_action  == "1"
 
@@ -33,6 +34,8 @@
     name:
       - "{{ db_name }}"
     state: import
+    encoding: "utf8"
+    force: true
     target: "/tmp/onstyle.sql"
     login_unix_socket: /run/mysqld/mysqld.sock
   when: db_action  == "2"
