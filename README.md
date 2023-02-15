@@ -6,11 +6,15 @@
 - Installing Nginx and create vhost config from Jinja template
 - Installing Mysql, creating db user, db password and database
 - Installing Wordpress engine with connection to Mysql and Nginx vhost
+- Generate letsencrypt sert
+- Create SWAP partiotion
 - Installing and configuring Elasticsearch , Logstash, Kibana with authomatic creation indexes for Wordpress debug.log
 
 ## Roles describe
 
 - install_php
+- letsencrypt
+- swap
 - nginx_vhost_install
 - mysql_install
 - wordpress_install
