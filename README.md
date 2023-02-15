@@ -1,12 +1,12 @@
 # Ansible
-# Install LEMP, Wordpress, ELK stack with auto creating indexes for for wordpress debug.log
+# Install LEMP, Wordpress, Letsencrypt cert,  ELK stack with auto creating indexes for for wordpress debug.log
 
 ## Features
 - Installing php
 - Installing Nginx and create vhost config from Jinja template
 - Installing Mysql, creating db user, db password and database
 - Installing Wordpress engine with connection to Mysql and Nginx vhost
-- Generate letsencrypt sert
+- Generate letsencrypt cert
 - Create SWAP partiotion
 - Installing and configuring Elasticsearch , Logstash, Kibana with authomatic creation indexes for Wordpress debug.log
 
