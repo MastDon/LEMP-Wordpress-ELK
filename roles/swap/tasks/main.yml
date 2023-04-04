@@ -28,3 +28,10 @@
     name: vm.swappiness
     value: "{{ swap_swappiness }}"
     state: present
+
+- name: Add Swap Entry to fstab
+  ansible.builtin.lineinfile:
+    path: /etc/fstab
+    line: "{{ swap_file_path }} none swap sw 0 0"
+    state: present
+    create: yes
