@@ -26,7 +26,7 @@ server {
 
 #------------------------------------------
 
-        listen 443 ssl default deferred;
+        listen 443 ssl http2 default deferred;
         server_tokens off;
         server_name {{ vhost_name }};
         root {{ document_root }}{{ vhost_name }};
