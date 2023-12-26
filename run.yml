@@ -16,7 +16,7 @@
     - name: db_action
       prompt: "***** If you want to create new db set - 1 | if you want to restore database set - 2 *****"
       private: false
-      
+
     - name: db_dump_path
       prompt: "***** Set path to db dump | You can skip if create new db ******"
       default: "/home/mastdon/Documents/moving/onstyle.sql"
@@ -41,13 +41,11 @@
       default: "https://github.com/WordPress/WordPress.git"
       private: false
 
-
-
   roles:
     - swap
     - install_php
     - nginx_vhost_install
-    # - letsencrypt
+    - letsencrypt
     - mysql_install
     - wordpress_install
     - elasticsearch
