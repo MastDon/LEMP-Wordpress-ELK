@@ -42,7 +42,7 @@
       private: false
 
   roles:
-    - swap
+   # - swap
     - install_php
     - nginx_vhost_install
     - letsencrypt
