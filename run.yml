@@ -19,7 +19,7 @@
 
     - name: db_dump_path
       prompt: "***** Set path to db dump | You can skip if create new db ******"
-      default: "/home/mastdon/Documents/moving/onstyle.sql"
+      default: "/tmp/onstyle.sql"
       private: false
 
     - name: db_name
