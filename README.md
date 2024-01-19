@@ -28,7 +28,7 @@
 2. Run run.yml file
 3. Respond to requests from vars_prompt about:
    - Version PHP
-   - Vhost name
+   - Vhost name: (example.com)
    - DB name
    - DB user name
    - DB user password 
