@@ -2,7 +2,7 @@
 # Install LEMP, Wordpress, Letsencrypt cert,  ELK stack with auto creating indexes for wordpress debug.log
 
 ## Features
-- Installing php
+- Installing php-fpm
 - Installing Nginx and create vhost config from Jinja template
 - Installing Mysql, creating db user, db password and database
 - Installing Wordpress engine with connection to Mysql and Nginx vhost
@@ -12,7 +12,7 @@
 
 ## Roles describe
 
-- install_php
+- install_php-fpm
 - letsencrypt
 - swap
 - nginx_vhost_install
@@ -27,7 +27,7 @@
 1. Configure access for your instance in group_vars/lab
 2. Run run.yml file
 3. Respond to requests from vars_prompt about:
-   - Version PHP
+   - Version php-fpm
    - Vhost name: (example.com)
    - DB name
    - DB user name
