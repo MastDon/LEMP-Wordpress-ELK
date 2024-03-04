@@ -8,7 +8,6 @@
 #     group: "{{ app_user }}"
 #     remote_src: yes
 #     extra_opts: [--strip-components=1]
-
 - name: Clone a github repository
   ansible.builtin.git:
     repo: "{{ git_repo_url }}"
