@@ -18,8 +18,8 @@
       private: false
 
     - name: db_dump_path
-      prompt: "***** Set path to db dump | You can skip if create new db ******"
-      default: "/tmp/onstyle.sql"
+      prompt: "***** Set path to db dump | You can skip if create new db ****"
+      default: "/tmp/example.sql"
       private: false
 
     - name: db_name
@@ -42,7 +42,7 @@
       private: false
 
   roles:
-   # - swap
+    - swap
     - install_php
     - nginx_vhost_install
     - letsencrypt
